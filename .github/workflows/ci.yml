@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Display welcome message
+        run: echo "Workflow выполнен успешно. Репозиторий: ${{ github.repository }}"
+
+      - name: List files
+        run: ls -la
+
+      - name: Show README
+        run: cat README.md || echo "README.md не найден"
