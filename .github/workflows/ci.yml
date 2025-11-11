@@ -13,6 +13,6 @@ jobs:
         
       - name: Success message
         run: |
-          echo "GitHub Actions работает!"
+          echo "GitHub Actions работает"
           echo "Ветка: ${{ github.ref }}"
           ls -la
