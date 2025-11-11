@@ -1,17 +1,10 @@
-name: CI Pipeline
+name: Simple CI
 
-on:
-  push:
-    branches: [master, new-feature]
+on: [push]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Success message
-        run: |
-          echo "GitHub Actions работает"
-          echo "Ветка: ${{ github.ref }}"
-          ls -la
+      - uses: actions/checkout@v3
+      - run: echo "Workflow is working"
