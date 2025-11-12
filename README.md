@@ -7,3 +7,6 @@
 ## Новые изменения через git push
 My first remote repo
 # My First Git Project
+## Практика с VSCode
+## Изменения через Pull Request
+- Добавлен новый функционал
